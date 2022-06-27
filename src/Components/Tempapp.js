@@ -5,7 +5,7 @@ const Tempapp = () => {
   const [city, setcity] = useState(null);
 
   // for user what exactly typing
-  const [search, setsearch] = useState("mumbai");
+  const [search, setSearch] = useState("mumbai");
 
   useEffect(() => {
     const fetchapi = async () => {
@@ -25,9 +25,9 @@ const Tempapp = () => {
           <div className="inputFeild">
             <input
               type="search"
-              placeholder="Enter Name"
-              onChange={(events) => {
-                setsearch(events.target.value);
+              placeholder="Enter city Name"
+              onChange={(e) => {
+                setSearch(e.target.value);
               }}
               defaultValue="mumbai"
               className="inputone"
